@@ -13,6 +13,8 @@
 		90AF878724B14E68006E21AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AF878624B14E68006E21AA /* Preview Assets.xcassets */; };
 		90AF879224B14E68006E21AA /* RoutinesLifeOrganizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF879124B14E68006E21AA /* RoutinesLifeOrganizerTests.swift */; };
 		90AF879D24B14E68006E21AA /* RoutinesLifeOrganizerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF879C24B14E68006E21AA /* RoutinesLifeOrganizerUITests.swift */; };
+		90AF87AD24B1569F006E21AA /* RoutineItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF87AC24B1569F006E21AA /* RoutineItem.swift */; };
+		90AF87AF24B15932006E21AA /* RoutineLeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF87AE24B15932006E21AA /* RoutineLeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		90AF879824B14E68006E21AA /* RoutinesLifeOrganizerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RoutinesLifeOrganizerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AF879C24B14E68006E21AA /* RoutinesLifeOrganizerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesLifeOrganizerUITests.swift; sourceTree = "<group>"; };
 		90AF879E24B14E68006E21AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90AF87AC24B1569F006E21AA /* RoutineItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItem.swift; sourceTree = "<group>"; };
+		90AF87AE24B15932006E21AA /* RoutineLeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineLeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		90AF877E24B14E68006E21AA /* RoutinesLifeOrganizer */ = {
 			isa = PBXGroup;
 			children = (
+				90AF87AA24B151BC006E21AA /* Models */,
 				90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */,
 				90AF878124B14E68006E21AA /* ContentView.swift */,
 				90AF878324B14E68006E21AA /* Assets.xcassets */,
@@ -128,6 +133,15 @@
 				90AF879E24B14E68006E21AA /* Info.plist */,
 			);
 			path = RoutinesLifeOrganizerUITests;
+			sourceTree = "<group>";
+		};
+		90AF87AA24B151BC006E21AA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				90AF87AC24B1569F006E21AA /* RoutineItem.swift */,
+				90AF87AE24B15932006E21AA /* RoutineLeader.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				90AF878224B14E68006E21AA /* ContentView.swift in Sources */,
+				90AF87AF24B15932006E21AA /* RoutineLeader.swift in Sources */,
+				90AF87AD24B1569F006E21AA /* RoutineItem.swift in Sources */,
 				90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
