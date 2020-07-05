@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		907CFE0924B24CD3005A7C2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0824B24CD3005A7C2E /* Colors.swift */; };
+		907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */; };
 		90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */; };
-		90AF878224B14E68006E21AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF878124B14E68006E21AA /* ContentView.swift */; };
 		90AF878424B14E68006E21AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AF878324B14E68006E21AA /* Assets.xcassets */; };
 		90AF878724B14E68006E21AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AF878624B14E68006E21AA /* Preview Assets.xcassets */; };
 		90AF879224B14E68006E21AA /* RoutinesLifeOrganizerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF879124B14E68006E21AA /* RoutinesLifeOrganizerTests.swift */; };
@@ -35,9 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		907CFE0824B24CD3005A7C2E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItemView.swift; sourceTree = "<group>"; };
 		90AF877C24B14E68006E21AA /* RoutinesLifeOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutinesLifeOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesLifeOrganizerApp.swift; sourceTree = "<group>"; };
-		90AF878124B14E68006E21AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90AF878324B14E68006E21AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90AF878624B14E68006E21AA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		90AF878824B14E68006E21AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		907CFE0524B24C5A005A7C2E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				90AF878324B14E68006E21AA /* Assets.xcassets */,
+				907CFE0824B24CD3005A7C2E /* Colors.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		907CFE0624B24C82005A7C2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90AF878824B14E68006E21AA /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		907CFE0A24B24E93005A7C2E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		90AF877324B14E68006E21AA = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +128,9 @@
 			children = (
 				90AF87AA24B151BC006E21AA /* Models */,
 				90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */,
-				90AF878124B14E68006E21AA /* ContentView.swift */,
-				90AF878324B14E68006E21AA /* Assets.xcassets */,
-				90AF878824B14E68006E21AA /* Info.plist */,
+				907CFE0A24B24E93005A7C2E /* Views */,
+				907CFE0624B24C82005A7C2E /* Supporting Files */,
+				907CFE0524B24C5A005A7C2E /* Resources */,
 				90AF878524B14E68006E21AA /* Preview Content */,
 			);
 			path = RoutinesLifeOrganizer;
@@ -273,7 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90AF878224B14E68006E21AA /* ContentView.swift in Sources */,
+				907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */,
+				907CFE0924B24CD3005A7C2E /* Colors.swift in Sources */,
 				90AF87AF24B15932006E21AA /* RoutineLeader.swift in Sources */,
 				90AF87AD24B1569F006E21AA /* RoutineItem.swift in Sources */,
 				90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */,
@@ -437,7 +465,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RoutinesLifeOrganizer/Preview Content\"";
 				DEVELOPMENT_TEAM = NR2242L85P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RoutinesLifeOrganizer/Info.plist;
+				INFOPLIST_FILE = "RoutinesLifeOrganizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,7 +487,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"RoutinesLifeOrganizer/Preview Content\"";
 				DEVELOPMENT_TEAM = NR2242L85P;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = RoutinesLifeOrganizer/Info.plist;
+				INFOPLIST_FILE = "RoutinesLifeOrganizer/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

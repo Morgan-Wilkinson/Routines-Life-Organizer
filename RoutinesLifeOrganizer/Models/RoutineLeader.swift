@@ -13,10 +13,25 @@ import SwiftUI
 struct RoutineLeader: Identifiable {
     var id: UUID = UUID()
     var name: String
-    var children: [RoutineItem]? = nil
+    // A Double that tracks the degree of completion for this category of
+    // routines. It is dependant on the childrens degree of completness.
+    var progress: Double
+    var children: [RoutineItem] = []
     
-    init(name: String, children: [RoutineItem]? = nil) {
+    init(name: String, progress: Double) {
         self.name = name
-        self.children = children
+        self.progress = progress
+    }
+    
+    mutating func updateProgress() {
+        if !children.isEmpty {
+            var newProgress = 0.0
+            
+            for child in children {
+                newProgress = child.progress
+            }
+            
+            progress = newProgress / Double(children.count)
+        }
     }
 }

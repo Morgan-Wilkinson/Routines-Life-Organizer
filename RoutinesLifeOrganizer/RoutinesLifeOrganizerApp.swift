@@ -11,7 +11,9 @@ import SwiftUI
 struct RoutinesLifeOrganizerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView {
+                RoutineItemView(routine: .dog)
+            }
         }
     }
 }
