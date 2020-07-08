@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90739CCE24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */; };
 		907CFE0924B24CD3005A7C2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0824B24CD3005A7C2E /* Colors.swift */; };
 		907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */; };
+		9095AB3C24B52C1600EE3AFB /* RoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9095AB3B24B52C1600EE3AFB /* RoutineListView.swift */; };
 		90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */; };
 		90AF878424B14E68006E21AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AF878324B14E68006E21AA /* Assets.xcassets */; };
 		90AF878724B14E68006E21AA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90AF878624B14E68006E21AA /* Preview Assets.xcassets */; };
@@ -36,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkBlueShadowProgressViewStyle.swift; sourceTree = "<group>"; };
 		907CFE0824B24CD3005A7C2E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItemView.swift; sourceTree = "<group>"; };
+		9095AB3B24B52C1600EE3AFB /* RoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListView.swift; sourceTree = "<group>"; };
 		90AF877C24B14E68006E21AA /* RoutinesLifeOrganizer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RoutinesLifeOrganizer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesLifeOrganizerApp.swift; sourceTree = "<group>"; };
 		90AF878324B14E68006E21AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90739CCC24B3DABB003BEC38 /* Supporting Modifers */ = {
+			isa = PBXGroup;
+			children = (
+				90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */,
+			);
+			path = "Supporting Modifers";
+			sourceTree = "<group>";
+		};
 		907CFE0524B24C5A005A7C2E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +110,9 @@
 		907CFE0A24B24E93005A7C2E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9095AB3B24B52C1600EE3AFB /* RoutineListView.swift */,
 				907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */,
+				90739CCC24B3DABB003BEC38 /* Supporting Modifers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,6 +319,8 @@
 				90AF87AF24B15932006E21AA /* RoutineLeader.swift in Sources */,
 				90AF87AD24B1569F006E21AA /* RoutineItem.swift in Sources */,
 				90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */,
+				9095AB3C24B52C1600EE3AFB /* RoutineListView.swift in Sources */,
+				90739CCE24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
