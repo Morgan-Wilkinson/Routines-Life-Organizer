@@ -1,22 +1,21 @@
 //
-//  RoutineItemView.swift
+//  NewEntry.swift
 //  RoutinesLifeOrganizer
 //
-//  Created by Morgan Wilkinson on 7/5/20.
+//  Created by Morgan Wilkinson on 7/8/20.
 //
 
 import SwiftUI
 
-struct RoutineItemView: View {
+struct NewEntry: View {
     @State var routine: RoutineItem
-    
     // Date picker
     @State var datePicked: Date = Date()
     @State private var showDatePicker = false
     
     // Progress
     @State private var showProgressUpdater = false
-    
+    @State var progress: Double = 0.0
     // Notes
     @State var notes = ""
     @State private var showNotes = true
@@ -66,35 +65,13 @@ struct RoutineItemView: View {
     }
 }
 
-struct UpdateProgress: View {
-    @Binding var progress: Double
-    
-    var body: some View {
-        GeometryReader { geometry in
-            VStack {
-                Slider(value: $progress, in: 0...100)
-            }
-        }
-    }
-}
 
-struct RoutineItemBackground: View {
-    var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Rectangle()
-                    .fill(Color.Peach)
-            }.frame(height: geometry.size.height / 6)
-        }
-    }
-}
-
-struct RoutineItemView_Previews: PreviewProvider {
+struct NewEntry_Previews: PreviewProvider {
     static var previews: some View {
         var routine: RoutineItem = .dog
         routine.notes = "\t Mauris blandit, magna a pharetra accumsan, diam dolor consequat mi, imperdiet tincidunt tellus mauris in sapien. Praesent semper, sem vitae consequat finibus, ligula ipsum hendrerit nunc, vel blandit erat magna sit amet enim. Donec risus libero, sagittis vitae lacinia a, fringilla maximus lacus. Nullam eleifend, leo a mattis pretium, metus ligula rhoncus ex, sit amet sagittis ex augue sit amet est. Aliquam tristique nisl eleifend, cursus lacus in, dapibus felis. In at lacus sit amet risus blandit feugiat in in libero. Sed malesuada ante in lorem tristique, eu malesuada ante bibendum. Cras molestie at sem non porta. Nunc quis congue ex. Nam sit amet elit mauris. Mauris mauris elit, ultricies vitae magna vitae, sodales suscipit magna. Nulla vehicula orci sed. \n\n Mauris blandit, magna a pharetra accumsan, diam dolor consequat mi, imperdiet tincidunt tellus mauris in sapien. Praesent semper, sem vitae consequat finibus, ligula ipsum hendrerit nunc, vel blandit erat magna sit amet enim. Donec risus libero, sagittis vitae lacinia a, fringilla maximus lacus. Nullam eleifend, leo a mattis pretium, metus ligula rhoncus ex, sit amet sagittis ex augue sit amet est. Aliquam tristique nisl eleifend, cursus lacus in, dapibus felis. In at lacus sit amet risus blandit feugiat in in libero. Sed malesuada ante in lorem tristique, eu malesuada ante bibendum. Cras molestie at sem non porta. Nunc quis congue ex. Nam sit amet elit mauris. Mauris mauris elit, ultricies vitae magna vitae, sodales suscipit magna. Nulla vehicula orci sed."
         return NavigationView {
-            RoutineItemView(routine: routine)
+            NewEntry(routine: routine)
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
