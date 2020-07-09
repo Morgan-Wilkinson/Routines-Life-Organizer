@@ -41,15 +41,11 @@ struct RoutineItemView: View {
                 if showProgressUpdater {
                     //UpdateProgress(progress: $routine.progress)
                     Form {
-                        //HStack {
-                            Button("Cancel") {showProgressUpdater.toggle()}
-                            Spacer()
-                            Button("Save") {showProgressUpdater.toggle()}
-                        //}
-                        HStack(spacing: 10.0) {
-                            Slider(value: $routine.progress, in: 0...100)
-                            Text("\(routine.progress, specifier: "%.0f")%")
-                        }.padding(.all, 10)
+                        Button("Cancel") {showProgressUpdater.toggle()}
+                        Spacer()
+                        Button("Save") {showProgressUpdater.toggle()}
+                        
+                        ProgressSlider(progress: $routine.progress)
                     }.edgesIgnoringSafeArea([.bottom, .leading, .trailing])
                 }
                 else {
@@ -98,3 +94,5 @@ struct RoutineItemView_Previews: PreviewProvider {
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
+
