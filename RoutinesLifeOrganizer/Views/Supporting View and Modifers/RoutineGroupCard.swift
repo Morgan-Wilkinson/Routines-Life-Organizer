@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RoutineGroupCard: View {
-    @State var routineGroup: RoutineGroups
+    @State var routineGroup: RoutineGroup
     
     var body: some View {
         ZStack {
@@ -24,7 +24,7 @@ struct RoutineGroupCard: View {
                         .font(.headline)
                 }
             }.padding(.all, 10)
-        }.frame(width: 100, height: 50, alignment: .center)
+        }//.frame(width: 100, height: 50, alignment: .center)
     }
 }
 

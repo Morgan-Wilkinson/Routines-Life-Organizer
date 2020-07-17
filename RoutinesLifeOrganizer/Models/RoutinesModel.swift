@@ -10,26 +10,26 @@ import SwiftUI
 
 struct Model: Identifiable {
     let id: String = UUID().uuidString
-    var routineGroups: [RoutineGroups] = [
-        RoutineGroups(name: "Main", entries: [
+    var routineGroups: [RoutineGroup] = [
+        RoutineGroup(name: "Main", entries: [
             RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
             RoutineItem(name: "Oval", icon: "circle.fill"),
-            RoutineItem(name: "Group", icon: "rectangle.3.offgrid", children: [
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill")
+            RoutineItem(name: "Group", icon: "rectangle.3.offgrid", subTasks: [
+                SubTask(index: 0, description: "Color the fish red"),
+                SubTask(index: 1, description: "Color the fish blue"),
+                SubTask(index: 2, description: "Color the fish black")
             ]),
-            RoutineItem(name: "Group", icon: "rectangle.3.offgrid", children: [
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
-                RoutineItem(name: "Rectangle", icon: "rectangle.fill")
+            RoutineItem(name: "Group", icon: "rectangle.3.offgrid", subTasks: [
+                SubTask(index: 0, description: "Color the fish red"),
+                SubTask(index: 1, description: "Color the fish blue"),
+                SubTask(index: 2, description: "Color the fish black")
             ])
         ]),
-        RoutineGroups(name: "Highlights", entries: [
+        RoutineGroup(name: "Highlights", entries: [
             RoutineItem(name: "Triangle", icon: "triangle.fill"),
             RoutineItem(name: "Triangle", icon: "triangle.fill")
         ]),
-        RoutineGroups(name: "Version 2", entries: [
+        RoutineGroup(name: "Version 2", entries: [
             RoutineItem(name: "Rectangle", icon: "triangle.fill"),
             RoutineItem(name: "Oval", icon: "circle.fill"),
             RoutineItem(name: "Triangle", icon: "triangle.fill")
@@ -37,7 +37,7 @@ struct Model: Identifiable {
     ]
 }
 
-struct RoutineGroups: Identifiable {
+struct RoutineGroup: Identifiable {
     var id: String = UUID().uuidString
     var name: String
     var icon: String? = ""
@@ -61,10 +61,17 @@ struct RoutineItem: Identifiable {
     // A Double that represents the degree of completion for this routine.
     var progress: Double = 0.0
     var relatedRoutines: [RoutineItem]? = nil
-    var children: [RoutineItem]?
+    var subTasks: [SubTask]?
     // The date of when the entry was last edited.
     var dateLastEdited: Date = Date()
     
+}
+
+/// SubTask is a child of a RoutineItem. It describes the various steps that would need to be completed inorder to finish the RoutineItem.
+struct SubTask: Identifiable {
+    var id: String = UUID().uuidString
+    var index: Int
+    var description : String
 }
 
 extension RoutineItem {

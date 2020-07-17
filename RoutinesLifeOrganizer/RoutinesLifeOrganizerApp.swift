@@ -12,7 +12,7 @@ struct RoutinesLifeOrganizerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RoutineListView()
+                RoutineGroupsList()
             }
         }
     }
