@@ -33,6 +33,10 @@ struct RoutineItemView: View {
                         .padding(.all, 10)
 
                     TextEditor(text: $notes)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.gray, lineWidth: 1)
+                            )
                         .padding(.horizontal)
                 //}.padding(.all, 10)
                 Spacer()

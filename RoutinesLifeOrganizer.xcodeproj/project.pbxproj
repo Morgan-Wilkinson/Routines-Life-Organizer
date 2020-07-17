@@ -11,6 +11,7 @@
 		907CFE0924B24CD3005A7C2E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0824B24CD3005A7C2E /* Colors.swift */; };
 		907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */; };
 		9095AB3C24B52C1600EE3AFB /* RoutineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9095AB3B24B52C1600EE3AFB /* RoutineListView.swift */; };
+		909F9F8024C13CE400C08A72 /* RoutineGroupCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */; };
 		90AB717E24B6424D003904BA /* RoutineGroupsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */; };
 		90AB718024B69921003904BA /* RoutinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB717F24B69921003904BA /* RoutinesModel.swift */; };
 		90AB718224B6A843003904BA /* NewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB718124B6A843003904BA /* NewEntry.swift */; };
@@ -44,6 +45,7 @@
 		907CFE0824B24CD3005A7C2E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItemView.swift; sourceTree = "<group>"; };
 		9095AB3B24B52C1600EE3AFB /* RoutineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineListView.swift; sourceTree = "<group>"; };
+		909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupCard.swift; sourceTree = "<group>"; };
 		90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupsLabel.swift; sourceTree = "<group>"; };
 		90AB717F24B69921003904BA /* RoutinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesModel.swift; sourceTree = "<group>"; };
 		90AB718124B6A843003904BA /* NewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntry.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */,
 				90C6AA0724B7BBEB0060F3E7 /* ProgressSlider.swift */,
+				909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */,
 				90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */,
 			);
 			path = "Supporting View and Modifers";
@@ -322,6 +325,7 @@
 			files = (
 				90AB718024B69921003904BA /* RoutinesModel.swift in Sources */,
 				907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */,
+				909F9F8024C13CE400C08A72 /* RoutineGroupCard.swift in Sources */,
 				90AB717E24B6424D003904BA /* RoutineGroupsLabel.swift in Sources */,
 				90C6AA0824B7BBEB0060F3E7 /* ProgressSlider.swift in Sources */,
 				907CFE0924B24CD3005A7C2E /* Colors.swift in Sources */,
