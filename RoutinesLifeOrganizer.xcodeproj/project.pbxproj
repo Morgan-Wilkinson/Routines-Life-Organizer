@@ -13,7 +13,7 @@
 		9095AB3C24B52C1600EE3AFB /* RoutineGroupsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9095AB3B24B52C1600EE3AFB /* RoutineGroupsList.swift */; };
 		909F9F8024C13CE400C08A72 /* RoutineGroupCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */; };
 		909F9F8224C14D6600C08A72 /* RoutineItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F8124C14D6600C08A72 /* RoutineItemList.swift */; };
-		909F9F8424C1558D00C08A72 /* DailyRoutines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F8324C1558D00C08A72 /* DailyRoutines.swift */; };
+		909F9F8424C1558D00C08A72 /* HighlightedRoutines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */; };
 		90AB717E24B6424D003904BA /* RoutineGroupsLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */; };
 		90AB718024B69921003904BA /* RoutinesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB717F24B69921003904BA /* RoutinesModel.swift */; };
 		90AB718224B6A843003904BA /* NewEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB718124B6A843003904BA /* NewEntry.swift */; };
@@ -49,7 +49,7 @@
 		9095AB3B24B52C1600EE3AFB /* RoutineGroupsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupsList.swift; sourceTree = "<group>"; };
 		909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupCard.swift; sourceTree = "<group>"; };
 		909F9F8124C14D6600C08A72 /* RoutineItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItemList.swift; sourceTree = "<group>"; };
-		909F9F8324C1558D00C08A72 /* DailyRoutines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyRoutines.swift; sourceTree = "<group>"; };
+		909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedRoutines.swift; sourceTree = "<group>"; };
 		90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupsLabel.swift; sourceTree = "<group>"; };
 		90AB717F24B69921003904BA /* RoutinesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutinesModel.swift; sourceTree = "<group>"; };
 		90AB718124B6A843003904BA /* NewEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEntry.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 				909F9F8124C14D6600C08A72 /* RoutineItemList.swift */,
 				907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */,
 				90AB718124B6A843003904BA /* NewEntry.swift */,
-				909F9F8324C1558D00C08A72 /* DailyRoutines.swift */,
+				909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */,
 				90739CCC24B3DABB003BEC38 /* Supporting View and Modifers */,
 			);
 			path = Views;
@@ -339,7 +339,7 @@
 				90AF878024B14E68006E21AA /* RoutinesLifeOrganizerApp.swift in Sources */,
 				90AB718224B6A843003904BA /* NewEntry.swift in Sources */,
 				9095AB3C24B52C1600EE3AFB /* RoutineGroupsList.swift in Sources */,
-				909F9F8424C1558D00C08A72 /* DailyRoutines.swift in Sources */,
+				909F9F8424C1558D00C08A72 /* HighlightedRoutines.swift in Sources */,
 				90739CCE24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
