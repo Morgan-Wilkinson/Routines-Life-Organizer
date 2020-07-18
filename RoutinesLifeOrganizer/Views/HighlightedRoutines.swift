@@ -17,13 +17,19 @@ struct HighlightedRoutines: View {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
                 .fill(Color.Mustard)
             ScrollView {
-                LazyVGrid(columns: columns, alignment: .leading) {
+                VStack(alignment: .leading) {
+                    Text(routineGroup.name)
+                        .font(.title)
+                        .fontWeight(.semibold)
                     ForEach(routineGroup.entries) { entry in
-                        Label(entry.name, systemImage: "record.circle.fill")
+                        NavigationLink(destination: RoutineItemView(routine: entry)) {
+                            Label(entry.name, systemImage: "record.circle.fill")
+                        }
+                        Divider()
                     }
                 }.padding(.all, 10)
             }
-        }
+        }.padding(.all, 10)
     }
 }
 
@@ -31,7 +37,8 @@ struct HighlightedRoutines_Previews: PreviewProvider {
     static var previews: some View {
         let model: Model = Model()
         
-        HighlightedRoutines(routineGroup: model.routineGroups[0])
-            .previewLayout(.fixed(width: 350, height: 160))
+        NavigationView {
+            HighlightedRoutines(routineGroup: model.routineGroups[0])
+        }.previewLayout(.sizeThatFits)
     }
 }

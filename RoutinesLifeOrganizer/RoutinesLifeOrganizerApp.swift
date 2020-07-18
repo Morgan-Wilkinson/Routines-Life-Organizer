@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct RoutinesLifeOrganizerApp: App {
+    let model: Model = Model()
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RoutineGroupsList()
+                RoutineDashboard(model: model)
             }
         }
     }

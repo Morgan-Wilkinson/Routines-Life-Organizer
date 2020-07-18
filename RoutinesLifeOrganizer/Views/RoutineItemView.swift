@@ -38,7 +38,6 @@ struct RoutineItemView: View {
                                     .stroke(Color.gray, lineWidth: 1)
                             )
                         .padding(.horizontal)
-                //}.padding(.all, 10)
                 Spacer()
                 
                 // Progress

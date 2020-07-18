@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RoutineGroupsList: View {
-    @State var model: Model = Model()
+    @State var routineGroups: [RoutineGroup]
     
     let columns = [
             GridItem(.flexible()),
@@ -18,7 +18,7 @@ struct RoutineGroupsList: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(model.routineGroups) { group in
+                ForEach(routineGroups) { group in
                     NavigationLink(destination: RoutineItemList(routineGroup: group)) {
                         RoutineGroupCard(routineGroup: group)
                     }
@@ -26,15 +26,16 @@ struct RoutineGroupsList: View {
             }
             .padding(.horizontal)
         }
-        .navigationTitle("Graphics")
     }
 }
 
 
 struct RoutineGroupsList_Previews: PreviewProvider {
     static var previews: some View {
+        let model: Model = Model()
+        
         return NavigationView {
-            RoutineGroupsList()
+            RoutineGroupsList(routineGroups: model.routineGroups)
         }
     }
 }
