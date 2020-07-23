@@ -25,32 +25,20 @@ struct NewEntry: View {
     @State var dateOfOccurrence: Date = Date()
     @State private var showDatePicker = false
     
+    // Due Date?
+    @State private var hasDueDate = false
+    @State var dueDate: Date = Date()
+    @State private var frequencyPicker = Frequency.Daily
     
+    //@State var frequency: [String] = ["Daily", "Weekly", "Biweekly", "Monthly", "Every 3 Months", "Every 6 Months", "Yearly"]
     var body: some View {
         ZStack{
             RoutineItemBackground().edgesIgnoringSafeArea([.top, .leading, .trailing])
             
             VStack(alignment: .leading, spacing: 10.0) {
-                // Fix the DisclosureGroup when apple releases a fix for it
-                //DisclosureGroup("Notes", isExpanded: $showNotes) {
-                    Text("Notes")
-                        .font(.title)
-                        .padding(.all, 10)
-
-                    TextEditor(text: $notes)
-                        .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.gray, lineWidth: 1)
-                            )
-                        .padding(.horizontal)
-                Spacer()
-                
-                EditNotes(notes: $notes, progress: $progress, showProgressUpdater: $showProgressUpdater)
-                //ProgressSlider(progress: .constant(5))
+                EditNotes(notes: $notes, progress: $progress, showProgressUpdater: $showProgressUpdater, hasDueDate: $hasDueDate, dueDate: $dueDate, frequency: $frequencyPicker)
             }
         }.navigationTitle(Text("New Entry"))
-        .navigationBarItems(trailing: Button("Save") {
-            showProgressUpdater.toggle()})
     }
 }
 
@@ -60,49 +48,5 @@ struct NewEntry_Previews: PreviewProvider {
         return NavigationView {
             NewEntry()
         }.navigationViewStyle(StackNavigationViewStyle())
-    }
-}
-
-struct EditNotes: View {
-    @Binding var notes: String
-    @Binding var progress: Double
-    @Binding var showProgressUpdater: Bool
-    
-    var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color.white)
-                .shadow(radius: 5)
-            
-            VStack(alignment: .leading) {
-                // Buttons
-                HStack {
-                        Button("Cancel") {showProgressUpdater.toggle()}
-                        Spacer()
-                        Button("Save") {showProgressUpdater.toggle()}
-                }.edgesIgnoringSafeArea([.bottom, .leading, .trailing])
-                .padding([.top, .leading, .trailing])
-                Divider()
-                Spacer()
-                
-                // Progress Slider
-                HStack(spacing: 10.0) {
-                    Slider(value: $progress, in: 0...100)
-                    Text("\(progress, specifier: "%.0f")%")
-                }.padding(.horizontal)
-                
-                
-                // Notes Editor
-                Text("Notes:")
-                    .font(.footnote)
-                    .padding(.horizontal)
-                TextEditor(text: $notes)
-                    .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.gray, lineWidth: 1)
-                        )
-                    .padding([.leading, .bottom, .trailing])
-            }
-        }.padding([.top, .leading, .trailing], 10)
     }
 }

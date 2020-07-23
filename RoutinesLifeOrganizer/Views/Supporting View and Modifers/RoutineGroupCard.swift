@@ -13,7 +13,7 @@ struct RoutineGroupCard: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color.Mustard)
+                .fill(Color.Peach)
             VStack(alignment: .leading) {
                 Text(routineGroup.name)
                     .font(.title2)
@@ -24,7 +24,7 @@ struct RoutineGroupCard: View {
                         .font(.headline)
                 }
             }.padding(.all, 10)
-        }//.frame(width: 100, height: 50, alignment: .center)
+        }
     }
 }
 

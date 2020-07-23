@@ -10,12 +10,11 @@ import SwiftUI
 struct HighlightedRoutines: View {
     // This will hold all the daily routines.
     @State var routineGroup: RoutineGroup
-    let columns = [GridItem(.flexible())]
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(Color.Mustard)
+                .fill(Color.Peach)
             ScrollView {
                 VStack(alignment: .leading) {
                     Text(routineGroup.name)

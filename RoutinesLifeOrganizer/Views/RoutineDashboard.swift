@@ -10,22 +10,26 @@ import SwiftUI
 struct RoutineDashboard: View {
     @State var model: Model
     
+    let column = [GridItem(.flexible())]
+    
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                ZStack {
-                    Rectangle()
-                        .fill(Color.DarkTeal)
-                        .frame(width:  geometry.size.width, height:  geometry.size.height / 4)
-                    VStack {
-                        HighlightedRoutines(routineGroup: self.model.routineGroups[0])
-                            .frame(height: geometry.size.height / 4)
-                        Divider()
-                        RoutineGroupsList(routineGroups: self.model.routineGroups)
+                HighlightedRoutines(routineGroup: self.model.routineGroups[0])
+                    .frame(height: geometry.size.height / 3.75)
+                Divider()
+                RoutineGroupsList(routineGroups: self.model.routineGroups)
+
+                NavigationLink(destination: NewEntry()) {
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                            .fill(Color.Peach)
+                        Text("Add New Group")
                     }
-                }
+                }.padding(.all, 10)
+                .frame(height: geometry.size.height / 9)
             }
-        }
+        }.navigationTitle("Dashboard")
     }
 }
 

@@ -23,8 +23,7 @@ struct RoutineGroupsList: View {
                         RoutineGroupCard(routineGroup: group)
                     }
                 }
-            }
-            .padding(.horizontal)
+            }.padding(.horizontal)
         }
     }
 }
