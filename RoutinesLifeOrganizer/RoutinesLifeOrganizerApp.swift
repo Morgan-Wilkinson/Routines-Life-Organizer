@@ -14,8 +14,9 @@ struct RoutinesLifeOrganizerApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                RoutineDashboard(model: model)
+                RoutineDashboard().environmentObject(model)
             }
         }
     }
 }
+

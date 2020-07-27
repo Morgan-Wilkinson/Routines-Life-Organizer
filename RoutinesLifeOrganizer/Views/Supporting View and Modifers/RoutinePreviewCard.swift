@@ -32,7 +32,6 @@ struct RoutinePreviewCard: View {
                     }
                 }
             }.padding(.all, 10)
-            //.frame(width: geometry.size.width, height: 100, alignment: .center)
         }
     }
 }

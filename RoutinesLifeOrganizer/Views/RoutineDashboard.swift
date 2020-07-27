@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct RoutineDashboard: View {
-    @State var model: Model
-    
+    @EnvironmentObject var model: Model
+    //@State var model: Model
     let column = [GridItem(.flexible())]
     
     var body: some View {
@@ -20,7 +20,7 @@ struct RoutineDashboard: View {
                 Divider()
                 RoutineGroupsList(routineGroups: self.model.routineGroups)
 
-                NavigationLink(destination: NewEntry()) {
+                NavigationLink(destination: NewEntry(routineGroup: self.$model.routineGroups[0]).environmentObject(model)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(Color.Peach)
@@ -37,7 +37,7 @@ struct RoutineOverview_Previews: PreviewProvider {
     static var previews: some View {
         let model = Model()
         NavigationView {
-            RoutineDashboard(model: model)
+            RoutineDashboard().environmentObject(model)
         }
     }
 }

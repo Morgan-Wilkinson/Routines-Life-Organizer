@@ -8,9 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct Model: Identifiable {
+class Model: Identifiable, ObservableObject {
     let id: String = UUID().uuidString
-    var routineGroups: [RoutineGroup] = [
+    @Published var routineGroups: [RoutineGroup] = [
         RoutineGroup(name: "Main", entries: [
             RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
             RoutineItem(name: "Oval", icon: "circle.fill"),

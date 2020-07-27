@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NewEntry: View {
+    @EnvironmentObject var model: Model
     // Entry Editable Elements
     @State var name: String = ""
     @State var icon: String = ""
@@ -21,22 +22,23 @@ struct NewEntry: View {
     @State var progress: Double = 0.0
     @State private var showProgressUpdater = false
     
-    // Date picker
-    @State var dateOfOccurrence: Date = Date()
-    @State private var showDatePicker = false
-    
-    // Due Date?
+    // Frequency?
     @State private var hasDueDate = false
-    @State var dueDate: Date = Date()
     @State private var frequencyPicker = Frequency.Daily
     
-    //@State var frequency: [String] = ["Daily", "Weekly", "Biweekly", "Monthly", "Every 3 Months", "Every 6 Months", "Yearly"]
+    // DueTime
+    @State var hasTime: Bool = false
+    @State var timeOfOccurrence: Date = Date()
+    
+    // RoutineGroup
+    @Binding var routineGroup: RoutineGroup
+    
     var body: some View {
         ZStack{
             RoutineItemBackground().edgesIgnoringSafeArea([.top, .leading, .trailing])
             
             VStack(alignment: .leading, spacing: 10.0) {
-                EditNotes(notes: $notes, progress: $progress, showProgressUpdater: $showProgressUpdater, hasDueDate: $hasDueDate, dueDate: $dueDate, frequency: $frequencyPicker)
+                EditNotes(notes: $notes, progress: $progress, showProgressUpdater: $showProgressUpdater, hasFreq: $hasDueDate, frequency: $frequencyPicker, hasTime: $hasTime, timeOfOccurrence: $timeOfOccurrence, routineGroup: $routineGroup).environmentObject(model)
             }
         }.navigationTitle(Text("New Entry"))
     }
@@ -45,8 +47,9 @@ struct NewEntry: View {
 
 struct NewEntry_Previews: PreviewProvider {
     static var previews: some View {
+        let model = Model()
         return NavigationView {
-            NewEntry()
+            NewEntry(routineGroup: .constant(model.routineGroups[0]))
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
