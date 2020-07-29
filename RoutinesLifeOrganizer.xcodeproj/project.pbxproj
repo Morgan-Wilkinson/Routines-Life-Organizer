@@ -17,6 +17,9 @@
 		909F9F8024C13CE400C08A72 /* RoutineGroupCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */; };
 		909F9F8224C14D6600C08A72 /* RoutineItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F8124C14D6600C08A72 /* RoutineItemList.swift */; };
 		909F9F8424C1558D00C08A72 /* HighlightedRoutines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */; };
+		90A29F1624D0E39100B1F5C0 /* NewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A29F1524D0E39100B1F5C0 /* NewGroup.swift */; };
+		90A29F1924D0E62800B1F5C0 /* NewGroupIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A29F1824D0E62800B1F5C0 /* NewGroupIcon.swift */; };
+		90A29F1B24D0F9EA00B1F5C0 /* GroupIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A29F1A24D0F9EA00B1F5C0 /* GroupIcons.swift */; };
 		90A2DD1E24C28B8500B21405 /* RoutineDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A2DD1D24C28B8500B21405 /* RoutineDashboard.swift */; };
 		90A6466324CE58510006653A /* NotesOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6466224CE58510006653A /* NotesOptions.swift */; };
 		90A6466524CE60110006653A /* CheckListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6466424CE60110006653A /* CheckListItem.swift */; };
@@ -60,6 +63,9 @@
 		909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineGroupCard.swift; sourceTree = "<group>"; };
 		909F9F8124C14D6600C08A72 /* RoutineItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineItemList.swift; sourceTree = "<group>"; };
 		909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedRoutines.swift; sourceTree = "<group>"; };
+		90A29F1524D0E39100B1F5C0 /* NewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroup.swift; sourceTree = "<group>"; };
+		90A29F1824D0E62800B1F5C0 /* NewGroupIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroupIcon.swift; sourceTree = "<group>"; };
+		90A29F1A24D0F9EA00B1F5C0 /* GroupIcons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupIcons.swift; sourceTree = "<group>"; };
 		90A2DD1D24C28B8500B21405 /* RoutineDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineDashboard.swift; sourceTree = "<group>"; };
 		90A6466224CE58510006653A /* NotesOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesOptions.swift; sourceTree = "<group>"; };
 		90A6466424CE60110006653A /* CheckListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItem.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 				90C6AA0724B7BBEB0060F3E7 /* ProgressSlider.swift */,
 				909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */,
 				90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */,
+				90A29F1724D0E61500B1F5C0 /* New Group */,
 			);
 			path = "Supporting View and Modifers";
 			sourceTree = "<group>";
@@ -146,10 +153,19 @@
 				909F9F8124C14D6600C08A72 /* RoutineItemList.swift */,
 				907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */,
 				90AB718124B6A843003904BA /* NewEntry.swift */,
+				90A29F1524D0E39100B1F5C0 /* NewGroup.swift */,
 				909ABAA524C93392009ACF54 /* RoutineSequence.swift */,
 				90739CCC24B3DABB003BEC38 /* Supporting View and Modifers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90A29F1724D0E61500B1F5C0 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				90A29F1824D0E62800B1F5C0 /* NewGroupIcon.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		90AF877324B14E68006E21AA = {
@@ -217,6 +233,7 @@
 				90AB717F24B69921003904BA /* RoutinesModel.swift */,
 				909ABAA124C91A18009ACF54 /* FrequencyEnum.swift */,
 				90A6466424CE60110006653A /* CheckListItem.swift */,
+				90A29F1A24D0F9EA00B1F5C0 /* GroupIcons.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -350,6 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A29F1624D0E39100B1F5C0 /* NewGroup.swift in Sources */,
+				90A29F1924D0E62800B1F5C0 /* NewGroupIcon.swift in Sources */,
 				90A6466324CE58510006653A /* NotesOptions.swift in Sources */,
 				90AB718024B69921003904BA /* RoutinesModel.swift in Sources */,
 				907CFE0C24B24EA3005A7C2E /* RoutineItemView.swift in Sources */,
@@ -364,6 +383,7 @@
 				90A2DD1E24C28B8500B21405 /* RoutineDashboard.swift in Sources */,
 				90AB718224B6A843003904BA /* NewEntry.swift in Sources */,
 				909ABAA624C93392009ACF54 /* RoutineSequence.swift in Sources */,
+				90A29F1B24D0F9EA00B1F5C0 /* GroupIcons.swift in Sources */,
 				9095AB3C24B52C1600EE3AFB /* RoutineGroupsList.swift in Sources */,
 				909F9F8424C1558D00C08A72 /* HighlightedRoutines.swift in Sources */,
 				90739CCE24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift in Sources */,

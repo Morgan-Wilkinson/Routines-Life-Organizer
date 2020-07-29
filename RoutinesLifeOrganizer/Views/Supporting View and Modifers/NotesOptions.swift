@@ -27,7 +27,6 @@ struct NotesOptions: View {
         let format = DateFormatter()
         format.dateStyle = .full
         format.timeStyle = .short
-        //format.dateFormat = "E, d/MMM/y, HH:mm"
         return format
     }
     
@@ -40,7 +39,7 @@ struct NotesOptions: View {
                 }
                 if hasTime {
                     DisclosureGroup("\(formatter.string(from: timeOfOccurrence))", isExpanded: $showTimePicker) {
-                        DatePicker("Alarm", selection: $timeOfOccurrence)
+                        DatePicker("", selection: $timeOfOccurrence)
                             .datePickerStyle(WheelDatePickerStyle())
                             .labelsHidden()
                     }

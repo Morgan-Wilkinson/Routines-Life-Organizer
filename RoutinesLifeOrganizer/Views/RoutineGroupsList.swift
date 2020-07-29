@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoutineGroupsList: View {
+    @EnvironmentObject var model: Model
     @State var routineGroups: [RoutineGroup]
     
     let columns = [
@@ -24,7 +25,8 @@ struct RoutineGroupsList: View {
                     }
                 }
             }.padding(.horizontal)
-        }
+        }.navigationTitle("Routine Groups")
+        .navigationBarItems(trailing:  NavigationLink("Add", destination: NewGroup()))
     }
 }
 

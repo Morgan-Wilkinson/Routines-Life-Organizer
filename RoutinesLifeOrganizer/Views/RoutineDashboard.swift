@@ -18,7 +18,7 @@ struct RoutineDashboard: View {
                 HighlightedRoutines(routineGroup: self.model.routineGroups[0])
                     .frame(height: geometry.size.height / 3.75)
                 Divider()
-                RoutineGroupsList(routineGroups: self.model.routineGroups)
+                RoutineGroupsList(routineGroups: self.model.routineGroups).environmentObject(model)
 
                 NavigationLink(destination: NewEntry(routineGroup: self.$model.routineGroups[0]).environmentObject(model)) {
                     ZStack {
