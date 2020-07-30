@@ -112,17 +112,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		902237D924D3293300162533 /* Notes Editor */ = {
+			isa = PBXGroup;
+			children = (
+				90C6AA0724B7BBEB0060F3E7 /* ProgressSlider.swift */,
+				90A6466224CE58510006653A /* NotesOptions.swift */,
+				90EE519424C608A300B64D59 /* EditNotes.swift */,
+			);
+			path = "Notes Editor";
+			sourceTree = "<group>";
+		};
 		90739CCC24B3DABB003BEC38 /* Supporting View and Modifers */ = {
 			isa = PBXGroup;
 			children = (
 				90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */,
 				909ABAA324C9325F009ACF54 /* RoutinePreviewCard.swift */,
-				90EE519424C608A300B64D59 /* EditNotes.swift */,
-				90A6466224CE58510006653A /* NotesOptions.swift */,
-				90C6AA0724B7BBEB0060F3E7 /* ProgressSlider.swift */,
 				909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */,
 				90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */,
-				90A29F1724D0E61500B1F5C0 /* New Group */,
+				902237D924D3293300162533 /* Notes Editor */,
+				90A29F1724D0E61500B1F5C0 /* New Group Creator */,
 			);
 			path = "Supporting View and Modifers";
 			sourceTree = "<group>";
@@ -160,12 +168,12 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		90A29F1724D0E61500B1F5C0 /* New Group */ = {
+		90A29F1724D0E61500B1F5C0 /* New Group Creator */ = {
 			isa = PBXGroup;
 			children = (
 				90A29F1824D0E62800B1F5C0 /* NewGroupIcon.swift */,
 			);
-			path = "New Group";
+			path = "New Group Creator";
 			sourceTree = "<group>";
 		};
 		90AF877324B14E68006E21AA = {
