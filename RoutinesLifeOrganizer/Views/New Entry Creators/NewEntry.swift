@@ -49,7 +49,7 @@ struct NewEntry_Previews: PreviewProvider {
     static var previews: some View {
         let model = Model()
         return NavigationView {
-            NewEntry(routineGroup: .constant(model.routineGroups[0]))
+            NewEntry(routineGroup: .constant(model.routineGroups[0])).environmentObject(model)
         }.navigationViewStyle(StackNavigationViewStyle())
     }
 }

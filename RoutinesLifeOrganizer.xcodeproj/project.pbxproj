@@ -127,10 +127,8 @@
 		90739CCC24B3DABB003BEC38 /* Supporting View and Modifers */ = {
 			isa = PBXGroup;
 			children = (
-				90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */,
-				909ABAA324C9325F009ACF54 /* RoutinePreviewCard.swift */,
-				909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */,
-				90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */,
+				90960DE624D7C346007140C9 /* Shared Components */,
+				90960DE524D7C313007140C9 /* Dashboard Components */,
 				902237D924D3293300162533 /* Notes Editor */,
 				90A29F1724D0E61500B1F5C0 /* New Group Creator */,
 			);
@@ -158,7 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				90A2DD1D24C28B8500B21405 /* RoutineDashboard.swift */,
-				909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */,
 				9095AB3B24B52C1600EE3AFB /* RoutineGroupsList.swift */,
 				909F9F8124C14D6600C08A72 /* RoutineItemList.swift */,
 				907CFE0B24B24EA3005A7C2E /* RoutineItemView.swift */,
@@ -167,6 +164,25 @@
 				90739CCC24B3DABB003BEC38 /* Supporting View and Modifers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		90960DE524D7C313007140C9 /* Dashboard Components */ = {
+			isa = PBXGroup;
+			children = (
+				909F9F8324C1558D00C08A72 /* HighlightedRoutines.swift */,
+			);
+			path = "Dashboard Components";
+			sourceTree = "<group>";
+		};
+		90960DE624D7C346007140C9 /* Shared Components */ = {
+			isa = PBXGroup;
+			children = (
+				90739CCD24B3DB02003BEC38 /* DarkBlueShadowProgressViewStyle.swift */,
+				909ABAA324C9325F009ACF54 /* RoutinePreviewCard.swift */,
+				909F9F7F24C13CE400C08A72 /* RoutineGroupCard.swift */,
+				90AB717D24B6424D003904BA /* RoutineGroupsLabel.swift */,
+			);
+			path = "Shared Components";
 			sourceTree = "<group>";
 		};
 		90A29F1724D0E61500B1F5C0 /* New Group Creator */ = {
@@ -210,8 +226,8 @@
 		90AF877E24B14E68006E21AA /* RoutinesLifeOrganizer */ = {
 			isa = PBXGroup;
 			children = (
-				90AF87AA24B151BC006E21AA /* Models */,
 				90AF877F24B14E68006E21AA /* RoutinesLifeOrganizerApp.swift */,
+				90AF87AA24B151BC006E21AA /* Models */,
 				907CFE0A24B24E93005A7C2E /* Views */,
 				907CFE0624B24C82005A7C2E /* Supporting Files */,
 				907CFE0524B24C5A005A7C2E /* Resources */,

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RoutineItemList: View {
+    @EnvironmentObject var model: Model
     @State var routineGroup: RoutineGroup
     @State private var selection: Set<String> = []
     
@@ -20,6 +21,9 @@ struct RoutineItemList: View {
             }
         }.listStyle(SidebarListStyle())
         .navigationTitle(routineGroup.name)
+        .navigationBarItems(trailing: NavigationLink(destination: NewEntry(routineGroup: $routineGroup).environmentObject(model), label: {
+                Text("Add")
+        }))
     }
 }
 
@@ -29,7 +33,7 @@ struct RoutineItemList_Previews: PreviewProvider {
         let model: Model = Model()
         
         NavigationView {
-            RoutineItemList(routineGroup: model.routineGroups[0])
+            RoutineItemList(routineGroup: model.routineGroups[0]).environmentObject(model)
         }
     }
 }

@@ -11,7 +11,7 @@ import SwiftUI
 class Model: Identifiable, ObservableObject {
     let id: String = UUID().uuidString
     @Published var routineGroups: [RoutineGroup] = [
-        RoutineGroup(name: "Main", entries: [
+        RoutineGroup(name: "Main", color: Color.gray, icon: "rectangle.3.offgrid", shape: 0, entries: [
             RoutineItem(name: "Rectangle", icon: "rectangle.fill"),
             RoutineItem(name: "Oval", icon: "circle.fill"),
             RoutineItem(name: "Group", icon: "rectangle.3.offgrid", subTasks: [
@@ -25,11 +25,11 @@ class Model: Identifiable, ObservableObject {
                 SubTask(index: 2, description: "Color the fish black")
             ])
         ]),
-        RoutineGroup(name: "Highlights", entries: [
+        RoutineGroup(name: "Highlights", color: Color.red, icon: "rectangle.3.offgrid", shape: 0, entries: [
             RoutineItem(name: "Triangle", icon: "triangle.fill"),
             RoutineItem(name: "Triangle", icon: "triangle.fill")
         ]),
-        RoutineGroup(name: "Version 2", entries: [
+        RoutineGroup(name: "Version 2", color: Color.yellow, icon: "rectangle.3.offgrid", shape: 1, entries: [
             RoutineItem(name: "Rectangle", icon: "triangle.fill"),
             RoutineItem(name: "Oval", icon: "circle.fill"),
             RoutineItem(name: "Triangle", icon: "triangle.fill")
@@ -40,7 +40,9 @@ class Model: Identifiable, ObservableObject {
 struct RoutineGroup: Identifiable {
     var id: String = UUID().uuidString
     var name: String
-    var icon: String? = ""
+    var color: Color
+    var icon: String
+    var shape: Int
     var entries: [RoutineItem]
 }
 

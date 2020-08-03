@@ -9,7 +9,7 @@ import SwiftUI
 
 struct RoutineDashboard: View {
     @EnvironmentObject var model: Model
-    //@State var model: Model
+    @State var showSheet: Bool = false
     let column = [GridItem(.flexible())]
     
     var body: some View {
@@ -20,7 +20,7 @@ struct RoutineDashboard: View {
                 Divider()
                 RoutineGroupsList(routineGroups: self.model.routineGroups).environmentObject(model)
 
-                NavigationLink(destination: NewEntry(routineGroup: self.$model.routineGroups[0]).environmentObject(model)) {
+                NavigationLink(destination: NewGroup(dismissView: $showSheet).environmentObject(model)) {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10, style: .continuous)
                             .fill(Color.Peach)

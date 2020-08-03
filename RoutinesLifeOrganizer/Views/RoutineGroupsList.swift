@@ -10,7 +10,7 @@ import SwiftUI
 struct RoutineGroupsList: View {
     @EnvironmentObject var model: Model
     @State var routineGroups: [RoutineGroup]
-    
+    @State var showSheet: Bool = false
     let columns = [
             GridItem(.flexible()),
             GridItem(.flexible())
@@ -20,13 +20,17 @@ struct RoutineGroupsList: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
                 ForEach(routineGroups) { group in
-                    NavigationLink(destination: RoutineItemList(routineGroup: group)) {
+                    NavigationLink(destination: RoutineItemList(routineGroup: group).environmentObject(model)) {
                         RoutineGroupCard(routineGroup: group)
                     }
                 }
             }.padding(.horizontal)
         }.navigationTitle("Routine Groups")
-        .navigationBarItems(trailing:  NavigationLink("Add", destination: NewGroup()))
+        .navigationBarItems(trailing: Button(action: {showSheet.toggle()}, label: {
+            Text("Add")
+        }).sheet(isPresented: $showSheet) {
+            NewGroup(dismissView: $showSheet)
+        })
     }
 }
 
