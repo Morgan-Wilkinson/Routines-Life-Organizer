@@ -40,8 +40,7 @@ struct RoutineGroupsList_Previews: PreviewProvider {
         let model: Model = Model()
         
         return NavigationView {
-            RoutineGroupsList(routineGroups: model.routineGroups)
-        }
+            RoutineGroupsList(routineGroups: model.routineGroups).environmentObject(model)        }
     }
 }
 
